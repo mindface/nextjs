@@ -1,0 +1,71 @@
+.nav
+  padding: 0 0 30px
+  &-btn
+    position: relative
+    .btn
+       position: absolute
+       top: 10px
+       right: -40px
+       width: 30px
+       height: 30px
+       background-color: $white_color
+       border: 1px solid $base_dark_color
+       cursor: pointer
+       &-border
+         position: absolute
+         top: 0
+         right: 0
+         left: 0
+         bottom: 0
+         height: 4px
+         width: 4px
+         margin: auto
+         background-color: $base_dark_color
+         &::before,
+         &::after
+           content: ""
+           position: absolute
+           right: 0
+           left: 0
+           height: 4px
+           width: 4px
+           margin: auto
+           background-color: $base_dark_color
+         &::before
+            top: 8px
+         &::after
+            bottom: 8px
+
+  &-outer
+    position: fixed
+    z-index: 2
+    top: 0
+    left: 0
+    height: 100vh
+    width: 200px
+    background-color: $white_color
+    box-shadow: 3px 0 5px 0 $boxShadow
+    transform: translate(-100%,0)
+    transition: transform 0.3s
+    &.active
+      transform: translate(0,0)
+      .btn
+        &-border
+          &::before
+            top: 4px
+          &::after
+            bottom: 4px
+          
+  &-body
+    padding: 20px 0
+    .list
+      border-top: 1px solid $base_dark_color
+    .link
+      display: block
+      padding: 10px
+      font-size: 1.6rem
+      border-bottom: 1px solid $base_dark_color
+      transition: background-color 0.3s
+      &:hover
+        background-color: $base_dark_color
+        color: $white_color

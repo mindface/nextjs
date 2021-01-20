@@ -1,0 +1,33 @@
+
+.content
+  &-liimt
+    position: relative
+    max-width: 980px
+    margin: 0 auto
+  &-wrapper
+    position: relative
+    overflow: hidden
+    min-height: 100vh
+    &::before,
+    &::after
+      content: ""
+      position: absolute
+      width: 0
+      height: 0
+    &::before
+      top: 0
+      right: 0
+      border-top: 0 solid transparent
+      border-left: 0 solid $base_dark_color
+      border-right: 420px solid $base_dark_color
+      border-bottom: 264px solid transparent
+    &::after
+      left: 0
+      bottom: 0
+      border-top: 264px solid transparent
+      border-left: 420px solid $base_dark_color
+      border-right: 0 solid $base_dark_color
+      border-bottom: 0 solid $base_dark_color
+
+  &s-box
+    padding: 0 10px
